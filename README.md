@@ -7,6 +7,8 @@ Before you make any searches, navigate to the correct folder destination. In thi
 
 1. To search for concents information, enter this command on your terminal or command line
 `node liri.js concert-this "artist/band name here"` .
+[Images of searching for concert information] (liri-node-app/images/songsInfo.JPG)
+      
 
 2. To search for songs and it's information, enter this command on your terminal or command line
 `node liri.js spotify-this-song "song name here"` .
