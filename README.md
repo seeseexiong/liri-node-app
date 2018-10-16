@@ -13,3 +13,6 @@ Before you make any searches, navigate to the right folder destination.
 
 3. To search for movies, enter this command on your terminal or command line
 `node liri.js movie-this '<movie name here>'` .
+
+
+Enjoy!
