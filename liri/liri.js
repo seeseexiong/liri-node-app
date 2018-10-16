@@ -6,32 +6,118 @@ var keys = require("./keys.js");
 
 var searchTerm = process.argv[3];
 
-var userInput  = process.argv[2];
-  if (userInput === "concert-this"){
-    //Read the bands.js file.  Set it to "utf8" parameter.
-    // The code will store the contents of the reading inside the variable "data"
-    fs.readFile("/bands/bands.js", "utf8", function(error, data) {
-    
-    // If the code experiences any errors it will log the error to the console.
-    if (error) {
-    return console.log(error);
-    }
-    // We will then print the contents of data
-    console.log(data);
-    }
-  )}
-  else if (userInput === "spotify-this-song"){
+var commandInput  = process.argv[2];
+  if (commandInput === "concert-this"){
+     // Include the request npm package
+      var request = require('request');
 
+      //Run a request to the bandsintown API with the artist specified
+      var queryUrl = "https://rest.bandsintown.com/artists/" + searchTerm + "/events?app_id=codingbootcamp";
+      console.log(queryUrl);
+
+      // Create a request to the queryUrl
+      request(queryUrl, function(error, response, body) {
+        if (error) console.log('error:', error); //print the error if one occurred
+          console.log('statusCode:', response.statusCode); // Print the response status code if a response was received
+
+          let JSONResponse = JSON.parse(body);
+
+          var band = 0;
+
+            for (var i=0; i<1; i++) {
+            
+            //console.log(JSONResponse[0].venue.name)
+
+            //print the following information
+            //Name of the venue
+            console.log("==============================")
+            console.log("Venue: " + JSONResponse[0].venue.name)
+            
+            //Venue location
+            console.log("Location: " + JSONResponse[0].venue.city + ", " + JSONResponse[0].venue.country)
+
+            //Date of the event, MM/DD/YYYY
+            //var randomDate = JSONResponse[0].datetime;
+            //var randomFormat = "YYYY/MM/DDThh:mm:ss";
+            //var convertedDate = moment(randomDate, randomFormat);
+            //console.log("Date: " + convertedDate.format("MM/DD/YY hh:mm"))
+            //console.log("Date: " + moment((JSONResponse[0].datetime),"MM/DD/YY hh:mm"))
+            console.log("Date: " + JSONResponse[0].datetime)
+        }
+    })
   }
-  else if (userInput === "movie-this"){
 
+  if (commandInput === "spotify-this-song"){
+    var Spotify = require('node-spotify-api');
+ 
+    var spotify = new Spotify({
+      id: "9ed78ca16115470d9824df388eb36ec3",
+      secret: "fe7c6beb516c4ddca69d50af9523ea06"
+    });
+
+    spotify.search({ type: 'track', query: searchTerm }, function(err, data) {
+      if (err) {
+        return console.log('Error occurred: ' + err);
+      }
+
+    var tracks = 0;
+      for (var i=0; i<1; i++){
+        //console.log(data.tracks.items[0]); 
+        //print the followings: artist(s), song title, preview link, album
+      
+        var artist = data.tracks.items[i].artists[i].name;
+        console.log( "Artist: " + artist )
+      
+        console.log( "Song Title: " + searchTerm )
+      
+        var previewLink = data.tracks.items[0].artists[0].external_urls.spotify;
+        console.log( "Preview URL Link: " + previewLink )
+      
+        var album = data.tracks.items[0].album[0];
+        console.log( "Album: " + album )
+      
+      }
+    });
   }
-  else if (userInput === "do-what-it-says"){
 
+  if (commandInput === "movie-this") {
+    // Include the request npm package
+    let request = require('request');
+
+    //Take the arguement and use that as the search keyword
+    let searchTerm = process.argv[2];
+
+    //Run a request to the OMDB API with the movie specified
+    let queryUrl = "http://www.omdbapi.com/?t=" + searchTerm + "&y=&plot=short&apikey=trilogy";
+
+    //Debug against the actual URL.
+    console.log(queryUrl);
+
+    // Create a request to the queryUrl
+    request(queryUrl, function(error, response, body) {
+    if (error) console.log('error:', error); //print the error if one occurred
+
+    console.log('statusCode:', response.statusCode); // Print the response status code if a response was received
+    let JSONResponse = JSON.parse(body);
+    //console.log(JSONResponse)
+
+    // Print the following information
+    // Movie Title
+    console.log('Title:', JSONResponse.Title);
+    //Year movie came out
+    console.log('Year the movie came out:', JSONResponse.Year);
+    //IMDB Rating
+    console.log('IMDB Rating:', JSONResponse.imdbRating);
+    //Rotten tomatoes rating
+    console.log('Rotten tomatoes rating:', JSONResponse.Ratings.Source);
+    //Country the movie was produced
+    console.log('Country the movie was produced:', JSONResponse.Country);
+    //Language of the movie
+    console.log('Language:', JSONResponse.Language);
+    //Plot
+    console.log('Plot:', JSONResponse.Plot);
+    //Actors
+    console.log('Actors:', JSONResponse.Actors);  
+    });
   }
-
-  
-
-  
-
   

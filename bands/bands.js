@@ -2,7 +2,7 @@
 var request = require('request');
 
 //Take the arguement and use that as the search keyword
-var searchTerm = process.argv[2];
+var searchTerm = process.argv[3];
 
 //Run a request to the bandsintown API with the artist specified
 var queryUrl = "https://rest.bandsintown.com/artists/" + searchTerm + "/events?app_id=codingbootcamp";

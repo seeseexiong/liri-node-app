@@ -2,10 +2,10 @@
 let request = require('request');
 
 //Take the arguement and use that as the search keyword
-let movieName = process.argv[2];
+let searchTerm = process.argv[2];
 
 //Run a request to the OMDB API with the movie specified
-let queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
+let queryUrl = "http://www.omdbapi.com/?t=" + searchTerm + "&y=&plot=short&apikey=trilogy";
 
 //Debug against the actual URL.
 console.log(queryUrl);

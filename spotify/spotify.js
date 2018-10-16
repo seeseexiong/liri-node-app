@@ -5,9 +5,9 @@ var spotify = new Spotify({
   secret: "fe7c6beb516c4ddca69d50af9523ea06"
 });
 
-var songTitle = process.argv[2];
+var searchTerm = process.argv[2];
  
-spotify.search({ type: 'track', query: songTitle }, function(err, data) {
+spotify.search({ type: 'track', query: searchTerm }, function(err, data) {
   if (err) {
     return console.log('Error occurred: ' + err);
   }
@@ -20,7 +20,7 @@ var tracks = 0;
     var artist = data.tracks.items[i].artists[i].name;
     console.log( "Artist: " + artist )
 
-    console.log( "Song Title: " + songTitle )
+    console.log( "Song Title: " + searchTerm )
 
     var previewLink = data.tracks.items[0].artists[0].external_urls.spotify;
     console.log( "Preview URL Link: " + previewLink )
@@ -29,7 +29,6 @@ var tracks = 0;
     console.log( "Album: " + album )
 
   }
-
 });
 
 
