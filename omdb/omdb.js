@@ -37,3 +37,9 @@ request(queryUrl, function(error, response, body) {
   //Actors
   console.log('Actors:', JSONResponse.Actors);
 });
+
+module.export = {
+request: request,
+searchTerm: searchTerm,
+queryUrl: queryUrl
+}
