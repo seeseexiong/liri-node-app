@@ -7,13 +7,13 @@ LIRI is a command line node app that takes in your **search term** and gives bac
 You will need to have Node JS installed to use this app.
 
 ## Getting Started
-To get started, clone the the LIRI Node App repository onto your computer. Click [HERE](https://help.github.com/articles/cloning-a-repository/) for instructions to clone.  After you successfully cloned the app, open terminal and navigate to the correct folder destination. In this case, it will be the `liri.js` file.
+To get started, clone the LIRI Node App repository onto your computer. Click [HERE](https://help.github.com/articles/cloning-a-repository/) for instructions to clone.  After you successfully cloned the app, open terminal and navigate to the correct folder destination. In this case, it will be the `liri.js` file.
 
-1. To search for concents information, enter this command on your terminal or command line: <br/>
+1. To search for concerts information, enter this command on your terminal or command line: <br/>
  `node liri.js concert-this "artist/band name here"` . <br/>
 ![](images/concertInfo.JPG) <br/><br/>
 
-2. To search for songs and it's information, enter this command on your terminal or command line: <br/>
+2. To search for songs and its information, enter this command on your terminal or command line: <br/>
 `node liri.js spotify-this-song "song name here"` . <br/>
 ![](images/songsInfo.JPG) <br/><br/>
 
