@@ -4,6 +4,9 @@ LIRI is like iPhone's SIRI. LIRI stands for _Language Interpretation and Recogni
 This LIRI app will search Spotify for songs, Bands in Town for concerts, and OMDB for movies.
 LIRI is a command line node app that takes in your **search term** and gives back information regarding **songs** , **concert**, or **movies**.
 
+### Prerequisites
+You will need to have Node JS install to use this app.
+
 ## Getting Started
 To get started, clone the app onto your computer. After you successfully cloned the app, open terminal and navigate to the correct folder destination. In this case, it will be the `liri.js` file.
 
@@ -18,9 +21,6 @@ To get started, clone the app onto your computer. After you successfully cloned 
 3. To search for movies, enter this command on your terminal or command line: <br/>
 `node liri.js movie-this "movie name here"` . <br/>
 ![](images/movieInfo.JPG) <br/><br/><br/>
-
-### Prerequisites
-You will need to have Node JS install to use this app.
 
 ## API Used
 * [Node Spotify API](https://www.npmjs.com/package/node-spotify-api)
