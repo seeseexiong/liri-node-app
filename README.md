@@ -4,7 +4,7 @@ This LIRI app will search Spotify for songs, Bands in Town for concerts, and OMD
 LIRI is a command line node app that takes in your **search term** and gives back information regarding **songs** , **concert**, or **movies**.
 
 ### Prerequisites
-You will need to have Node JS install to use this app.
+You will need to have Node JS installed to use this app.
 
 ## Getting Started
 To get started, clone the app onto your computer. After you successfully cloned the app, open terminal and navigate to the correct folder destination. In this case, it will be the `liri.js` file.
