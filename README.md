@@ -1,5 +1,4 @@
-# liri-node-app
-
+# LIRI Node App
 LIRI is like iPhone's SIRI. LIRI stands for _Language Interpretation and Recognition Interface_. 
 This LIRI app will search Spotify for songs, Bands in Town for concerts, and OMDB for movies.
 LIRI is a command line node app that takes in your **search term** and gives back information regarding **songs** , **concert**, or **movies**.
