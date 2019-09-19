@@ -24,15 +24,15 @@ You will need to have Node JS installed on your local computer to use this app. 
 
 1. After you successfully cloned the app, open terminal and navigate to the correct folder destination. In this case, it will be the `liri.js` file.
 
-2. To search for concerts information, enter this command on your terminal or command line:
+2. To search for concerts information, enter this command on your command line:
  `node liri.js concert-this "artist/band name here"` .
 ![](images/concert.png)
 
-3. To search for songs and its information, enter this command on your terminal or command line:
+3. To search for songs and its information, enter this command on your command line:
 `node liri.js spotify-this-song "song name here"` .
 ![](images/spotifySong.png)
 
-4. To search for movies, enter this command on your terminal or command line:
+4. To search for movies, enter this command on your command line:
 `node liri.js movie-this "movie name here"` .
 ![](images/searchMovie.png)
 
