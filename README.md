@@ -28,11 +28,15 @@ You will need to have Node JS installed on your local computer to use this app. 
 
 3. To search for songs and its information, enter this command on your terminal or command line:
 `node liri.js spotify-this-song "song name here"` .
-![](images/songsInfo.JPG)
+![](images/spotifySong.png)
 
 4. To search for movies, enter this command on your terminal or command line:
 `node liri.js movie-this "movie name here"` .
-![](images/movieInfo.JPG)
+![](images/searchMovie.png)
+
+5. Or enter this command on your command line to read a pre-written command: 
+`node liri.js do-what-it-says` .
+![](images/doWhatItSays.png)
 
 ## API Used
 
