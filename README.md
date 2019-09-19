@@ -5,12 +5,14 @@ This LIRI app will search Spotify for songs, Bands in Town for concerts, and OMD
 LIRI is a command line node app that takes in your **search term** and gives back information regarding **songs** , **concert**, or **movies**.
 
 ## Prerequisites
-### If you want to use this app, you will need to create an account at Spotify and provide your own id and secret for it to work
 
 You will need to have Node JS installed on your local computer to use this app.  To install Node JS, go to this website <https://nodejs.org/en/>.  Once Node JS is installed, followed the instructions below:
 1. Clone the LIRI Node App repository onto your computer. Click [HERE](https://help.github.com/articles/cloning-a-repository/) for instructions to clone.  
 2. Install npm modules. On your command line, type the following key words: `npm install node-spotify-api request moment dotenv`
 3. Create a `.env` file on your root folder.  This is where you will save your spotify id and secret.
+
+### If you want to use this app, you will need to create an account at Spotify and provide your own id and secret for it to work
+
 * The Spotify API requires you sign up as a developer to generate the necessary credentials. You can follow these steps in order to generate a **client id** and **client secret**:
 * Step One: Visit <https://developer.spotify.com/my-applications/#!/>
 * Step Two: Either login to your existing Spotify account or create a new one (a free account is fine) and log in.
