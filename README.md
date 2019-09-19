@@ -47,6 +47,8 @@ You will need to have Node JS installed on your local computer to use this app. 
 ## Built With
 
 * Node JS
+* Required npm modules: node-spotify-api, request, dotenv, moment
+* Code editor: Visual Studio Code
 
 ## Authors
 
