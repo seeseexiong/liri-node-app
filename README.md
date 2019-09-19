@@ -24,7 +24,7 @@ You will need to have Node JS installed on your local computer to use this app. 
 
 2. To search for concerts information, enter this command on your terminal or command line:
  `node liri.js concert-this "artist/band name here"` .
-![](images/concertInfo.JPG)
+![](images/concert.png)
 
 3. To search for songs and its information, enter this command on your terminal or command line:
 `node liri.js spotify-this-song "song name here"` .
