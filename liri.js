@@ -143,7 +143,7 @@ function searchMovie() {
         // * IMDB Rating of the movie.
         console.log('IMDB RATING            - ' + JSONResponse.imdbRating)
         // * Rotten Tomatoes Rating of the movie.
-        console.log('Rotton Tomatoes RATING - ' + JSONResponse.Ratings[0].Source)
+        console.log('Rotton Tomatoes RATING - ' + JSONResponse.Ratings[1].Value)
         // * Country where the movie was produced.
         console.log('COUNTRY OF PRODUCTION  - ' + JSONResponse.Country)
         // * Language of the movie.
